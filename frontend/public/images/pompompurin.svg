@@ -1,1 +1,104 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160"><ellipse cx="80" cy="86" rx="50" ry="42" fill="#f3c969"/><ellipse cx="80" cy="55" rx="24" ry="18" fill="#d8a35d"/><circle cx="64" cy="82" r="5" fill="#5a4a50"/><circle cx="96" cy="82" r="5" fill="#5a4a50"/><ellipse cx="80" cy="96" rx="9" ry="6" fill="#fff"/><circle cx="80" cy="94" r="3" fill="#6f4a38"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500">
+
+  
+  <g id="pompompurin-stationery">
+
+    
+    <rect x="44" y="44" width="412" height="412" rx="36" ry="36" fill="none" stroke="#E09F3E" stroke-width="6" stroke-dasharray="14 10" stroke-linecap="round" />
+    <rect x="56" y="56" width="388" height="388" rx="28" ry="28" fill="none" stroke="#F6D55C" stroke-width="3" />
+
+    
+    
+    <g transform="translate(86, 86)">
+      <path d="M -12 8 L -9 -6 C -8 -9, 8 -9, 9 -6 L 12 8 Z" fill="#FFF3B0" stroke="#4A2525" stroke-width="3" stroke-linejoin="round" />
+      <path d="M -9 -6 C -8 -9, 8 -9, 9 -6 L 10 -1 C 6 1, 3 -2, 0 0 C -3 -2, -6 1, -10 -1 Z" fill="#7D2626" stroke="#4A2525" stroke-width="2.5" stroke-linejoin="round" />
+    </g>
+
+    
+    <g transform="translate(414, 86) rotate(10)">
+      <polygon points="0,-12 3.5,-3.5 12,-3.5 5,2.5 7.5,11 0,6 -7.5,11 -5,2.5 -12,-3.5 -3.5,-3.5" fill="#FFD13B" stroke="#4A2525" stroke-width="3" stroke-linejoin="round" />
+    </g>
+
+    
+    <g transform="translate(86, 412) rotate(-10)">
+      <path d="M 0 -5 C 0 -13, -13 -13, -13 -4 C -13 5, 0 13, 0 13 C 0 13, 13 5, 13 -4 C 13 -13, 0 -13, 0 -5 Z" fill="#E09F3E" stroke="#4A2525" stroke-width="3" stroke-linejoin="round" />
+    </g>
+
+    
+    <g transform="translate(414, 412)">
+      <circle cx="0" cy="-8" r="5.5" fill="#FFF3B0" stroke="#4A2525" stroke-width="2.8" />
+      <circle cx="7.5" cy="-2.5" r="5.5" fill="#FFF3B0" stroke="#4A2525" stroke-width="2.8" />
+      <circle cx="5" cy="6.5" r="5.5" fill="#FFF3B0" stroke="#4A2525" stroke-width="2.8" />
+      <circle cx="-5" cy="6.5" r="5.5" fill="#FFF3B0" stroke="#4A2525" stroke-width="2.8" />
+      <circle cx="-7.5" cy="-2.5" r="5.5" fill="#FFF3B0" stroke="#4A2525" stroke-width="2.8" />
+      <circle cx="0" cy="0" r="4.5" fill="#7D2626" stroke="#4A2525" stroke-width="2.5" />
+    </g>
+
+    
+    <g id="pompompurin-character" transform="translate(0, 6)">
+
+      
+      <path d="M 250 112
+               C 214 112, 184 128, 152 138
+               C 102 152, 82 184, 94 214
+               C 100 228, 114 236, 128 238
+               C 114 256, 118 286, 140 296
+               C 138 334, 150 374, 174 394
+               C 172 414, 184 426, 200 426
+               C 216 426, 224 414, 224 402
+               C 242 404, 264 404, 282 402
+               C 282 416, 290 430, 306 430
+               C 322 430, 334 416, 332 396
+               C 356 376, 368 334, 366 296
+               C 388 286, 392 254, 378 236
+               C 394 234, 408 224, 412 208
+               C 422 178, 402 148, 352 136
+               C 320 128, 286 112, 250 112 Z" fill="#FFF7AE" stroke="#4A2525" stroke-width="7.2" stroke-linejoin="round" />
+
+      
+      <path d="M 162 186 L 144 212" fill="none" stroke="#4A2525" stroke-width="7" stroke-linecap="round" />
+
+      
+      <path d="M 338 178 L 358 206" fill="none" stroke="#4A2525" stroke-width="7" stroke-linecap="round" />
+
+      
+      <path d="M 134 294
+               C 114 286, 108 258, 120 234
+               C 130 214, 148 212, 156 226
+               C 162 236, 154 248, 146 250
+               C 156 254, 158 268, 146 274" fill="#FFF7AE" stroke="#4A2525" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" />
+      
+      <path d="M 156 232 L 166 228 M 154 252 L 166 254" stroke="#4A2525" stroke-width="4.5" stroke-linecap="round" />
+
+      
+      <path d="M 372 292
+               C 392 284, 398 256, 386 232
+               C 376 212, 358 210, 350 224
+               C 344 234, 352 246, 360 248
+               C 350 252, 348 266, 360 272" fill="#FFF7AE" stroke="#4A2525" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" />
+      
+      <path d="M 350 230 L 340 226 M 352 250 L 340 252" stroke="#4A2525" stroke-width="4.5" stroke-linecap="round" />
+
+      
+      <g transform="translate(250, 114)">
+        <ellipse cx="0" cy="0" rx="64" ry="24" fill="#7D2626" stroke="#4A2525" stroke-width="6.8" />
+        
+        <path d="M -14 -20 C -16 -34, -4 -36, 0 -22" fill="#7D2626" stroke="#4A2525" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round" />
+      </g>
+
+      
+      <path d="M 192 202 C 194 186, 210 186, 212 200" fill="none" stroke="#4A2525" stroke-width="6.5" stroke-linecap="round" />
+      <path d="M 294 202 C 296 186, 312 186, 314 200" fill="none" stroke="#4A2525" stroke-width="6.5" stroke-linecap="round" />
+
+      
+      <path d="M 244 206 L 256 206 L 250 214 Z" fill="#4A2525" stroke="#4A2525" stroke-width="4" stroke-linejoin="round" />
+      <path d="M 250 212
+               C 250 226, 232 232, 224 224
+               C 220 220, 222 215, 226 214" fill="none" stroke="#4A2525" stroke-width="6" stroke-linecap="round" />
+      <path d="M 250 212
+               C 250 226, 268 232, 276 224
+               C 280 220, 278 215, 274 214" fill="none" stroke="#4A2525" stroke-width="6" stroke-linecap="round" />
+
+    </g>
+  </g>
+</svg>

@@ -1,1 +1,124 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160"><ellipse cx="80" cy="86" rx="48" ry="44" fill="#fff"/><path d="M42 70C32 20 68 25 80 58 92 25 128 20 118 70z" fill="#efa9bb"/><circle cx="65" cy="82" r="5" fill="#5a4a50"/><circle cx="95" cy="82" r="5" fill="#5a4a50"/><ellipse cx="80" cy="96" rx="7" ry="5" fill="#f2b84b"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500">
+
+  
+  <g id="my-melody-stationery">
+
+    
+    <rect x="44" y="44" width="412" height="412" rx="36" ry="36" fill="none" stroke="#FF74B1" stroke-width="6" stroke-dasharray="14 10" stroke-linecap="round" />
+    <rect x="56" y="56" width="388" height="388" rx="28" ry="28" fill="none" stroke="#FFB8D6" stroke-width="3" />
+
+    
+    <g transform="translate(86, 86)">
+      <path d="M 0 -9 C 6 -15, 15 -6, 9 0 C 15 6, 6 15, 0 9 C -6 15, -15 6, -9 0 C -15 -6, -6 -15, 0 -9 Z" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="3" stroke-linejoin="round" />
+      <circle cx="0" cy="0" r="4" fill="#FFE600" stroke="#1A1A1A" stroke-width="2.5" />
+    </g>
+
+    <path d="M 416 80 C 416 73, 406 73, 406 80 C 406 73, 396 73, 396 80 C 396 89, 406 96, 406 96 C 406 96, 416 89, 416 80 Z" fill="#FF74B1" stroke="#1A1A1A" stroke-width="3" stroke-linejoin="round" />
+
+    <path d="M 96 408 C 96 401, 86 401, 86 408 C 86 401, 76 401, 76 408 C 76 417, 86 424, 86 424 C 86 424, 96 417, 96 408 Z" fill="#FF74B1" stroke="#1A1A1A" stroke-width="3" stroke-linejoin="round" />
+
+    <g transform="translate(414, 414)">
+      <path d="M 0 -9 C 6 -15, 15 -6, 9 0 C 15 6, 6 15, 0 9 C -6 15, -15 6, -9 0 C -15 -6, -6 -15, 0 -9 Z" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="3" stroke-linejoin="round" />
+      <circle cx="0" cy="0" r="4" fill="#FFE600" stroke="#1A1A1A" stroke-width="2.5" />
+    </g>
+
+    
+    <g id="my-melody-character" transform="translate(0, 6)">
+
+      
+      <path d="M 206 312
+               C 188 320, 174 334, 166 346
+               C 186 364, 218 370, 250 368
+               C 282 370, 314 364, 334 346
+               C 326 334, 312 320, 294 312 Z" fill="#FF74B1" stroke="#1A1A1A" stroke-width="6.5" stroke-linejoin="round" />
+
+      
+      <path d="M 294 348
+               C 314 346, 324 362, 312 374
+               C 304 380, 294 378, 290 372" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round" />
+
+      
+      <path d="M 212 328
+               L 210 384
+               C 208 402, 222 414, 238 414
+               C 245 414, 249 411, 251 406
+               C 253 411, 257 414, 264 414
+               C 280 414, 294 402, 292 384
+               L 290 328 Z" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="6.5" stroke-linejoin="round" />
+
+      
+      <path d="M 251 390 L 251 406" stroke="#1A1A1A" stroke-width="6" stroke-linecap="round" />
+      <path d="M 224 384 C 230 382, 236 382, 240 384" fill="none" stroke="#1A1A1A" stroke-width="5.5" stroke-linecap="round" />
+      <path d="M 262 384 C 266 382, 272 382, 278 384" fill="none" stroke="#1A1A1A" stroke-width="5.5" stroke-linecap="round" />
+
+      
+      <path d="M 232 316
+               L 256 358
+               C 278 348, 304 338, 326 334
+               C 312 320, 294 312, 276 312 Z" fill="#FF74B1" stroke="#1A1A1A" stroke-width="6" stroke-linejoin="round" />
+
+      
+      <g transform="translate(264, 330)">
+        
+        <circle cx="13" cy="6" r="2.2" fill="#1A1A1A" />
+        <circle cx="18" cy="4" r="2.2" fill="#1A1A1A" />
+        <circle cx="23" cy="1" r="2.2" fill="#1A1A1A" />
+        <circle cx="29" cy="-4" r="5.5" fill="#FFE600" stroke="#1A1A1A" stroke-width="3.5" />
+        
+        <path d="M 0 -8 C 5 -13, 13 -5, 8 0 C 13 5, 5 13, 0 8 C -5 13, -13 5, -8 0 C -13 -5, -5 -13, 0 -8 Z" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="4" stroke-linejoin="round" />
+        <circle cx="0" cy="0" r="3.5" fill="#FFE600" stroke="#1A1A1A" stroke-width="2.5" />
+      </g>
+
+      
+      <path d="M 192 206
+               C 194 142, 212 82, 246 82
+               C 274 82, 278 114, 274 142
+               C 316 154, 342 198, 342 246
+               C 342 292, 304 322, 250 322
+               C 196 322, 158 292, 158 246
+               C 158 222, 172 212, 192 206 Z" fill="#FF74B1" stroke="#1A1A1A" stroke-width="6.8" stroke-linejoin="round" />
+
+      
+      <path d="M 244 176
+               C 242 142, 268 124, 298 128
+               C 328 132, 336 164, 326 190" fill="#FF74B1" />
+      <path d="M 294 174
+               C 282 188, 256 192, 246 176
+               C 238 158, 254 128, 286 128
+               C 316 128, 334 152, 330 184" fill="none" stroke="#1A1A1A" stroke-width="6.5" stroke-linecap="round" />
+
+      
+      <path d="M 250 218
+               C 202 218, 174 238, 174 270
+               C 174 304, 204 322, 250 322
+               C 296 322, 326 304, 326 270
+               C 326 238, 298 218, 250 218 Z" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="6.5" stroke-linejoin="round" />
+
+      
+      <g transform="translate(188, 194) rotate(-8)">
+        <path d="M 0 -15 C 10 -25, 25 -10, 15 0 C 25 10, 10 25, 0 15 C -10 25, -25 10, -15 0 C -25 -10, -10 -25, 0 -15 Z" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="6" stroke-linejoin="round" />
+        <circle cx="0" cy="0" r="7" fill="#FFE600" stroke="#1A1A1A" stroke-width="4.5" />
+      </g>
+
+      
+      <ellipse cx="202" cy="272" rx="8.5" ry="13.5" fill="#1A1A1A" />
+      <ellipse cx="298" cy="272" rx="8.5" ry="13.5" fill="#1A1A1A" />
+
+      
+      <ellipse cx="250" cy="284" rx="9" ry="6" fill="#FFE600" stroke="#1A1A1A" stroke-width="4.8" />
+
+      
+      <path d="M 241 298 C 245 303, 255 303, 259 298" fill="none" stroke="#1A1A1A" stroke-width="4.8" stroke-linecap="round" />
+
+      
+      <path d="M 214 334
+               C 194 336, 186 356, 200 368
+               C 212 376, 228 364, 228 346
+               C 234 342, 234 330, 228 326
+               C 230 314, 220 310, 216 320
+               C 210 316, 202 322, 206 330
+               C 200 332, 200 340, 208 344" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+
+    </g>
+  </g>
+</svg>

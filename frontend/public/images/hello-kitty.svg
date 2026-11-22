@@ -1,1 +1,123 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160"><circle cx="80" cy="80" r="46" fill="#fff"/><path d="M35 42L62 55 43 68zM125 42L98 55l19 13z" fill="#fff"/><ellipse cx="80" cy="55" rx="24" ry="14" fill="#f28aa5"/><circle cx="67" cy="82" r="5" fill="#5a4a50"/><circle cx="93" cy="82" r="5" fill="#5a4a50"/><ellipse cx="80" cy="92" rx="7" ry="5" fill="#f2b84b"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500">
+
+  
+  <g id="hello-kitty-stationery">
+
+    
+    <rect x="44" y="44" width="412" height="412" rx="36" ry="36" fill="none" stroke="#FF5C8A" stroke-width="6" stroke-dasharray="14 10" stroke-linecap="round" />
+    <rect x="56" y="56" width="388" height="388" rx="28" ry="28" fill="none" stroke="#FFB3C6" stroke-width="3" />
+
+    
+    
+    <g transform="translate(86, 86)">
+      <circle cx="0" cy="-8" r="6" fill="#FF85A1" stroke="#1E1E1E" stroke-width="2.8" />
+      <circle cx="7.5" cy="-2.5" r="6" fill="#FF85A1" stroke="#1E1E1E" stroke-width="2.8" />
+      <circle cx="5" cy="6.5" r="6" fill="#FF85A1" stroke="#1E1E1E" stroke-width="2.8" />
+      <circle cx="-5" cy="6.5" r="6" fill="#FF85A1" stroke="#1E1E1E" stroke-width="2.8" />
+      <circle cx="-7.5" cy="-2.5" r="6" fill="#FF85A1" stroke="#1E1E1E" stroke-width="2.8" />
+      <circle cx="0" cy="0" r="4.5" fill="#FFD13B" stroke="#1E1E1E" stroke-width="2.5" />
+    </g>
+
+    
+    <g transform="translate(414, 86) rotate(10)">
+      <path d="M 0 -5 C 0 -13, -13 -13, -13 -4 C -13 5, 0 13, 0 13 C 0 13, 13 5, 13 -4 C 13 -13, 0 -13, 0 -5 Z" fill="#EF233C" stroke="#1E1E1E" stroke-width="3" stroke-linejoin="round" />
+    </g>
+
+    
+    <g transform="translate(86, 412) rotate(-10)">
+      <path d="M 0 -7 C -8 -13, -16 -6, -13 4 C -11 11, -4 14, 0 12 C 4 14, 11 11, 13 4 C 16 -6, 8 -13, 0 -7 Z" fill="#EF233C" stroke="#1E1E1E" stroke-width="3" stroke-linejoin="round" />
+      <path d="M 0 -7 C 1 -12, 4 -14, 6 -13" fill="none" stroke="#1E1E1E" stroke-width="2.8" stroke-linecap="round" />
+      <ellipse cx="5" cy="-11" rx="4" ry="2.2" fill="#52B788" stroke="#1E1E1E" stroke-width="2" transform="rotate(-25 5 -11)" />
+    </g>
+
+    
+    <g transform="translate(414, 412) rotate(-10)">
+      <path d="M 0 -5 C 0 -13, -13 -13, -13 -4 C -13 5, 0 13, 0 13 C 0 13, 13 5, 13 -4 C 13 -13, 0 -13, 0 -5 Z" fill="#FF7597" stroke="#1E1E1E" stroke-width="3" stroke-linejoin="round" />
+    </g>
+
+    
+    <g id="hello-kitty-character" transform="translate(0, 6)">
+
+      
+      <path d="M 192 286
+               C 166 296, 152 320, 162 336
+               C 170 348, 188 344, 198 332 Z" fill="#FFFFFF" stroke="#1E1E1E" stroke-width="7" stroke-linejoin="round" />
+      
+      <path d="M 198 282
+               C 182 288, 170 298, 166 308
+               L 196 322 Z" fill="#FF85A1" stroke="#1E1E1E" stroke-width="6.8" stroke-linejoin="round" />
+
+      
+      <path d="M 308 286
+               C 334 296, 348 320, 338 336
+               C 330 348, 312 344, 302 332 Z" fill="#FFFFFF" stroke="#1E1E1E" stroke-width="7" stroke-linejoin="round" />
+      
+      <path d="M 302 282
+               C 318 288, 330 298, 334 308
+               L 304 322 Z" fill="#FF85A1" stroke="#1E1E1E" stroke-width="6.8" stroke-linejoin="round" />
+
+      
+      <path d="M 194 374
+               C 194 398, 248 398, 250 378
+               L 250 364 L 194 364 Z" fill="#FFFFFF" stroke="#1E1E1E" stroke-width="7" stroke-linejoin="round" />
+      <path d="M 306 374
+               C 306 398, 252 398, 250 378
+               L 250 364 L 306 364 Z" fill="#FFFFFF" stroke="#1E1E1E" stroke-width="7" stroke-linejoin="round" />
+
+      
+      <path d="M 198 280 L 302 280 L 310 368 L 190 368 Z" fill="#FF85A1" stroke="#1E1E1E" stroke-width="7" stroke-linejoin="round" />
+
+      
+      <path d="M 206 280
+               L 220 280
+               C 226 306, 274 306, 280 280
+               L 294 280
+               L 310 368
+               L 252 368
+               L 250 358
+               L 248 368
+               L 190 368 Z" fill="#2B7FFF" stroke="#1E1E1E" stroke-width="7" stroke-linejoin="round" />
+
+      
+      <path d="M 176 168
+               C 162 126, 186 106, 216 136
+               C 238 130, 262 130, 284 136
+               C 314 106, 338 126, 324 168
+               C 348 190, 352 234, 330 262
+               C 304 290, 196 290, 170 262
+               C 148 234, 152 190, 176 168 Z" fill="#FFFFFF" stroke="#1E1E1E" stroke-width="7.2" stroke-linejoin="round" />
+
+      
+      <ellipse cx="204" cy="226" rx="8" ry="11.5" fill="#1E1E1E" />
+      <ellipse cx="296" cy="226" rx="8" ry="11.5" fill="#1E1E1E" />
+
+      
+      <ellipse cx="250" cy="242" rx="11.5" ry="8" fill="#FFD13B" stroke="#1E1E1E" stroke-width="5.5" />
+
+      
+      <path d="M 164 210 L 130 206" stroke="#1E1E1E" stroke-width="6.5" stroke-linecap="round" />
+      <path d="M 160 228 L 128 230" stroke="#1E1E1E" stroke-width="6.5" stroke-linecap="round" />
+      <path d="M 166 246 L 136 256" stroke="#1E1E1E" stroke-width="6.5" stroke-linecap="round" />
+
+      
+      <path d="M 336 210 L 370 206" stroke="#1E1E1E" stroke-width="6.5" stroke-linecap="round" />
+      <path d="M 340 228 L 372 230" stroke="#1E1E1E" stroke-width="6.5" stroke-linecap="round" />
+      <path d="M 334 246 L 364 256" stroke="#1E1E1E" stroke-width="6.5" stroke-linecap="round" />
+
+      
+      <g transform="translate(194, 142) rotate(-24)">
+        
+        <path d="M -10 -4 C -30 -32, -52 -16, -44 10 C -36 32, -14 20, -8 8 Z" fill="#EF233C" stroke="#1E1E1E" stroke-width="6.8" stroke-linejoin="round" />
+        <circle cx="-24" cy="4" r="6" fill="#EF233C" stroke="#1E1E1E" stroke-width="5" />
+
+        
+        <path d="M 10 -4 C 30 -32, 52 -16, 44 10 C 36 32, 14 20, 8 8 Z" fill="#EF233C" stroke="#1E1E1E" stroke-width="6.8" stroke-linejoin="round" />
+        <circle cx="24" cy="4" r="6" fill="#EF233C" stroke="#1E1E1E" stroke-width="5" />
+
+        
+        <ellipse cx="0" cy="3" rx="14" ry="13" fill="#EF233C" stroke="#1E1E1E" stroke-width="6.8" />
+      </g>
+
+    </g>
+  </g>
+</svg>
