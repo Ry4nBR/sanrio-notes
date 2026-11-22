@@ -1,0 +1,32 @@
+:root {
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+  color: #4b4657;
+  background: #fbf9ff;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  --bg: #fbf9ff;
+  --surface: #ffffff;
+  --text: #4b4657;
+  --muted: #756f82;
+  --border: #e6dff0;
+  --primary: #8c76bd;
+  --primary-dark: #68518f;
+  --danger: #a95d69;
+  --success: #4f8067;
+  --radius: 18px;
+  --shadow: 0 12px 28px rgba(93, 73, 119, .10);
+  --space-1: 6px;
+  --space-2: 10px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --max-width: 1180px;
+}
+
+* { box-sizing: border-box; }
+html { min-width: 320px; }
+body { margin: 0; min-height: 100vh; background: var(--bg); }
+button, input, textarea { font: inherit; }
+button { cursor: pointer; }
+button:disabled { cursor: not-allowed; opacity: .65; }
+img { max-width: 100%; }
+:focus-visible { outline: 3px solid rgba(140, 118, 189, .35); outline-offset: 3px; }
