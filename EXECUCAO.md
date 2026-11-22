@@ -25,14 +25,18 @@
 
 ## Testes
 
-Nenhum teste executado nesta etapa.
+- Backend: testes de dados e CRUD aprovados.
+- Front-end: build de produção aprovado.
+- Integração local: `/health` HTTP 200 e front-end HTTP 200 em servidores locais.
+- Coleção Postman: JSON exportado validado.
 
 ## Deploy
-
-- Render: pendente
-- Vercel: pendente
+- Render: pendente de autenticação humana e deploy externo.
+- Vercel: pendente de URL da API, autenticação humana e deploy externo.
 
 ## Pendencias
 
-- Implementar a estrutura da API e do front-end.
+- Preencher URLs reais de Render e Vercel apos o deploy externo.
+- Capturar e inserir evidencias visuais reais.
+- Compartilhar a colecao no Postman e registrar o link real.
 - Publicar os servicos externos apos autenticacao humana.
