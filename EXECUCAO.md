@@ -30,6 +30,7 @@
 - Front-end: build de produção aprovado.
 - Integração local: `/health` HTTP 200 e front-end HTTP 200 em servidores locais.
 - Coleção Postman: JSON exportado validado.
+- Correção CORS: origens `http://localhost:5173` e `http://127.0.0.1:5173` validadas com HTTP 200.
 
 ## Deploy
 - Render: pendente de autenticação humana e deploy externo.
