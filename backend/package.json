@@ -1,0 +1,14 @@
+{
+  "name": "sanrio-notes-api",
+  "version": "1.0.0",
+  "description": "API REST do bloco de notas Sanrio Notes",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
