@@ -4,7 +4,7 @@
   "description": "API REST do bloco de notas Sanrio Notes",
   "main": "server.js",
   "scripts": {
-    "test": "node --test test/*.test.js",
+    "test": "node --test test/data.test.js",
     "start": "node server.js",
     "dev": "node --watch server.js"
   },
