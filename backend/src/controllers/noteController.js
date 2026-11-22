@@ -37,4 +37,23 @@ function createNote(req, res, next) {
   }
 }
 
-module.exports = { listNotes, getNoteById, createNote };
+function updateNote(req, res, next) {
+  const result = validateNote(req.body || {});
+  if (!result.isValid) {
+    res.status(400).json({ error: 'Dados invalidos', fields: result.errors });
+    return;
+  }
+
+  try {
+    const note = noteService.updateNote(req.params.id, result.value);
+    if (!note) {
+      res.status(404).json({ error: 'Nota nao encontrada' });
+      return;
+    }
+    res.status(200).json(note);
+  } catch (error) {
+    next(error);
+  }
+}
+
+module.exports = { listNotes, getNoteById, createNote, updateNote };
