@@ -23,6 +23,8 @@ app.get('/health', (req, res) => {
   res.status(200).json({ status: 'ok' });
 });
 
+app.use('/api/notes', require('./src/routes/noteRoutes'));
+
 app.listen(PORT, () => {
   console.log(`Sanrio Notes API rodando na porta ${PORT}`);
 });
