@@ -1,0 +1,155 @@
+{
+  "info": {
+    "name": "Sanrio Notes API - Testes CRUD locais",
+    "description": "Fluxo CRUD automatizado para uma API local isolada. Nao execute contra producao.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "baseUrl", "value": "http://127.0.0.1:3100" },
+    { "key": "noteId", "value": "" },
+    { "key": "runToken", "value": "" }
+  ],
+  "item": [
+    {
+      "name": "Criar nota",
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.collectionVariables.set('runToken', Date.now().toString());",
+              "pm.collectionVariables.unset('noteId');"
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('POST retorna 201', function () { pm.response.to.have.status(201); });",
+              "const note = pm.response.json();",
+              "pm.test('nota criada tem id e dados esperados', function () {",
+              "  pm.expect(note.id).to.be.a('string').and.not.empty;",
+              "  pm.expect(note.titulo).to.eql('Nota Postman ' + pm.collectionVariables.get('runToken'));",
+              "  pm.expect(note.personagem).to.eql('cinnamoroll');",
+              "});",
+              "pm.collectionVariables.set('noteId', note.id);"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"titulo\": \"Nota Postman {{runToken}}\",\n  \"texto\": \"Registro temporario para teste CRUD local\",\n  \"personagem\": \"cinnamoroll\"\n}",
+          "options": { "raw": { "language": "json" } }
+        },
+        "url": "{{baseUrl}}/api/notes"
+      }
+    },
+    {
+      "name": "Listar e encontrar nota criada",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('GET geral retorna 200', function () { pm.response.to.have.status(200); });",
+              "const notes = pm.response.json();",
+              "pm.test('GET geral retorna a nota criada', function () {",
+              "  pm.expect(notes).to.be.an('array');",
+              "  pm.expect(notes.some(function (note) { return note.id === pm.collectionVariables.get('noteId'); })).to.eql(true);",
+              "});"
+            ]
+          }
+        }
+      ],
+      "request": { "method": "GET", "url": "{{baseUrl}}/api/notes" }
+    },
+    {
+      "name": "Consultar nota criada",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('GET por ID retorna 200', function () { pm.response.to.have.status(200); });",
+              "const note = pm.response.json();",
+              "pm.test('ID corresponde a nota criada', function () { pm.expect(note.id).to.eql(pm.collectionVariables.get('noteId')); });"
+            ]
+          }
+        }
+      ],
+      "request": { "method": "GET", "url": "{{baseUrl}}/api/notes/{{noteId}}" }
+    },
+    {
+      "name": "Atualizar nota criada",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('PUT retorna 200', function () { pm.response.to.have.status(200); });",
+              "const note = pm.response.json();",
+              "pm.test('PUT persiste os dados atualizados', function () {",
+              "  pm.expect(note.id).to.eql(pm.collectionVariables.get('noteId'));",
+              "  pm.expect(note.titulo).to.eql('Nota Postman atualizada ' + pm.collectionVariables.get('runToken'));",
+              "  pm.expect(note.personagem).to.eql('kuromi');",
+              "});"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "PUT",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"titulo\": \"Nota Postman atualizada {{runToken}}\",\n  \"texto\": \"Conteudo atualizado no teste CRUD local\",\n  \"personagem\": \"kuromi\"\n}",
+          "options": { "raw": { "language": "json" } }
+        },
+        "url": "{{baseUrl}}/api/notes/{{noteId}}"
+      }
+    },
+    {
+      "name": "Excluir nota criada",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('DELETE retorna 204 sem corpo', function () {",
+              "  pm.response.to.have.status(204);",
+              "  pm.expect(pm.response.text()).to.eql('');",
+              "});"
+            ]
+          }
+        }
+      ],
+      "request": { "method": "DELETE", "url": "{{baseUrl}}/api/notes/{{noteId}}" }
+    },
+    {
+      "name": "Confirmar exclusao",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('nota excluida retorna 404', function () { pm.response.to.have.status(404); });"
+            ]
+          }
+        }
+      ],
+      "request": { "method": "GET", "url": "{{baseUrl}}/api/notes/{{noteId}}" }
+    }
+  ]
+}

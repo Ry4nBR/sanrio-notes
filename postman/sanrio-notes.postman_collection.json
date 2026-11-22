@@ -1,28 +1,41 @@
 {
   "info": {
-    "name": "Sanrio Notes API",
-    "description": "Colecao CRUD da API Sanrio Notes",
+    "name": "Sanrio Notes API - Documentacao CRUD",
+    "description": "Requisicoes CRUD da API Sanrio Notes. Para escrita segura de teste, use a colecao local dedicada.",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
   },
   "variable": [
-    { "key": "baseUrl", "value": "http://localhost:3000" },
+    { "key": "baseUrl", "value": "https://sanrio-notes-api.onrender.com" },
     { "key": "noteId", "value": "" }
   ],
   "item": [
     {
       "name": "Listar notas",
-      "request": { "method": "GET", "url": "{{baseUrl}}/api/notes" }
+      "request": {
+        "method": "GET",
+        "description": "Lista todas as notas. Parametros: nenhum. Respostas: 200 OK com array JSON; 500 em erro interno.",
+        "url": "{{baseUrl}}/api/notes"
+      }
     },
     {
       "name": "Consultar nota",
-      "request": { "method": "GET", "url": "{{baseUrl}}/api/notes/{{noteId}}" }
+      "request": {
+        "method": "GET",
+        "description": "Busca uma nota pelo ID. Parametro de caminho: noteId (UUID retornado pelo POST). Respostas: 200 OK com a nota; 404 Not Found se o ID nao existir.",
+        "url": "{{baseUrl}}/api/notes/{{noteId}}"
+      }
     },
     {
       "name": "Criar nota",
       "request": {
         "method": "POST",
+        "description": "Cria uma nota. Corpo JSON obrigatorio: titulo (string nao vazia), texto (string nao vazia), personagem (ID permitido; opcional, padrao cinnamoroll). Respostas: 201 Created com a nota criada; 400 Bad Request para dados invalidos.",
         "header": [{ "key": "Content-Type", "value": "application/json" }],
-        "body": { "mode": "raw", "raw": "{\n  \"titulo\": \"Minha primeira nota\",\n  \"texto\": \"Conteudo da nota\",\n  \"personagem\": \"cinnamoroll\"\n}" },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"titulo\": \"Minha primeira nota\",\n  \"texto\": \"Conteudo da nota\",\n  \"personagem\": \"cinnamoroll\"\n}",
+          "options": { "raw": { "language": "json" } }
+        },
         "url": "{{baseUrl}}/api/notes"
       }
     },
@@ -30,14 +43,23 @@
       "name": "Atualizar nota",
       "request": {
         "method": "PUT",
+        "description": "Atualiza uma nota existente. Parametro de caminho: noteId (UUID). Corpo JSON: titulo e texto nao vazios; personagem deve ser um ID permitido. Respostas: 200 OK com a nota atualizada; 400 Bad Request para dados invalidos; 404 Not Found se o ID nao existir.",
         "header": [{ "key": "Content-Type", "value": "application/json" }],
-        "body": { "mode": "raw", "raw": "{\n  \"titulo\": \"Nota atualizada\",\n  \"texto\": \"Conteudo atualizado\",\n  \"personagem\": \"kuromi\"\n}" },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"titulo\": \"Nota atualizada\",\n  \"texto\": \"Conteudo atualizado\",\n  \"personagem\": \"kuromi\"\n}",
+          "options": { "raw": { "language": "json" } }
+        },
         "url": "{{baseUrl}}/api/notes/{{noteId}}"
       }
     },
     {
       "name": "Excluir nota",
-      "request": { "method": "DELETE", "url": "{{baseUrl}}/api/notes/{{noteId}}" }
+      "request": {
+        "method": "DELETE",
+        "description": "Exclui uma nota pelo ID. Parametro de caminho: noteId (UUID). Respostas: 204 No Content quando excluida; 404 Not Found se o ID nao existir. A resposta 204 nao tem corpo.",
+        "url": "{{baseUrl}}/api/notes/{{noteId}}"
+      }
     }
   ]
 }
