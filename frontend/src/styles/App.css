@@ -16,23 +16,33 @@
 .primary-button { background: var(--primary); color: white; }
 .secondary-button { background: white; color: var(--primary-dark); border-color: #d9ceed; }
 .danger-button { background: #fff4f5; color: #924a55; border-color: #eccfd3; }
-.notes-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
-.note-card { position: relative; min-height: 220px; overflow: hidden; border: 1px solid rgba(90,70,110,.10); border-radius: var(--radius); box-shadow: var(--shadow); background: #eee8f8; }
-.note-card.cinnamoroll { background: #eae3fb; }.note-card.hello-kitty { background: #f8dde5; }.note-card.my-melody { background: #f7e0df; }.note-card.kuromi { background: #ded0ee; }.note-card.pompompurin { background: #f7eab5; }.note-card.pochacco { background: #dceefa; }.note-card.keroppi { background: #dceddc; }.note-card.badtz-maru { background: #dfe1e1; }
-.note-content { position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; padding: 20px; }
+.notes-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; align-items: start; }
+.note-card { position: relative; width: 100%; min-height: 0; aspect-ratio: 1 / 1; overflow: hidden; isolation: isolate; border: 1px solid rgba(90,70,110,.10); border-radius: var(--radius); box-shadow: var(--shadow); background: #eee8f8; }
+.note-card.cinnamoroll, .note-editor.cinnamoroll { background: #eae3fb; }.note-card.hello-kitty, .note-editor.hello-kitty { background: #f8dde5; }.note-card.my-melody, .note-editor.my-melody { background: #f7e0df; }.note-card.kuromi, .note-editor.kuromi { background: #ded0ee; }.note-card.pompompurin, .note-editor.pompompurin { background: #f7eab5; }.note-card.pochacco, .note-editor.pochacco { background: #dceefa; }.note-card.keroppi, .note-editor.keroppi { background: #dceddc; }.note-card.badtz-maru, .note-editor.badtz-maru { background: #dfe1e1; }
+.note-paper-art { position: absolute; inset: 0; display: block; width: 100%; height: 100%; object-fit: contain; opacity: 0.25; pointer-events: none; z-index: 0; }
+.note-content { position: relative; z-index: 1; width: 100%; height: 100%; min-height: 0; display: flex; flex-direction: column; padding: 14.5%; }
 .note-meta { display: flex; justify-content: space-between; gap: 8px; color: var(--muted); font-size: 12px; }
-.note-card h3 { margin: 18px 0 8px; font-size: 20px; }
-.note-card p { margin: 0; line-height: 1.55; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
-.note-actions { margin-top: auto; padding-top: 16px; display: flex; justify-content: flex-start; gap: 8px; }
-.character-art { position: absolute; right: 8px; bottom: 8px; display: block; width: 110px; height: 110px; object-fit: contain; opacity: 0.14; pointer-events: none; z-index: 0; }
+.note-card h3 { flex: 0 0 auto; max-width: 100%; margin: 12px 0 8px; font-size: 20px; overflow-wrap: anywhere; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.note-text { flex: 1; min-height: 0; margin: 0; line-height: 1.55; overflow-y: auto; overflow-wrap: anywhere; white-space: pre-wrap; }
+.note-actions { flex: 0 0 auto; margin-top: 8px; padding-top: 8px; display: flex; justify-content: flex-start; flex-wrap: wrap; gap: 8px; }
 .loading-state, .empty-state { min-height: 260px; display: grid; place-content: center; text-align: center; border: 1px dashed var(--border); border-radius: var(--radius); background: white; }
 .empty-state p { color: var(--muted); }.empty-state h2 { margin: 0 0 8px; }
 .error-banner { margin-bottom: 16px; display: flex; justify-content: space-between; gap: 12px; padding: 12px 14px; border-radius: 12px; background: #fff0f1; color: #8c4650; }
 .error-banner button { border: 0; background: transparent; color: inherit; font-weight: 700; }
 .modal-overlay { position: fixed; inset: 0; z-index: 20; display: grid; place-items: center; padding: 16px; background: rgba(75,70,87,.35); backdrop-filter: blur(4px); }
 .modal { position: relative; width: min(620px, 100%); max-height: calc(100vh - 32px); overflow: auto; border-radius: 20px; background: white; padding: 26px; box-shadow: 0 24px 60px rgba(54,42,70,.22); }
+.modal.note-editor { width: min(500px, calc(100vw - 32px), calc(100vh - 32px)); max-height: calc(100vh - 32px); aspect-ratio: 1 / 1; overflow: hidden; padding: 0; isolation: isolate; }
+.editor-content { position: relative; z-index: 1; width: 100%; height: 100%; min-height: 0; display: flex; flex-direction: column; padding: 14.5%; overflow-y: auto; }
+.editor-heading { flex: 0 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.editor-heading h2 { margin: 0; }
 .modal h2 { margin-top: 0; }.close-button { position: absolute; right: 16px; top: 16px; width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--border); background: white; }
+.editor-heading .close-button { position: static; flex: 0 0 36px; }
 .modal form { display: grid; gap: 16px; }.modal label, .modal fieldset { display: grid; gap: 7px; }.modal input, .modal textarea { width: 100%; border: 1px solid var(--border); border-radius: 10px; padding: 10px 12px; }.modal textarea { min-height: 150px; resize: vertical; }.modal fieldset { border: 0; padding: 0; }.modal legend { font-weight: 700; margin-bottom: 8px; }.character-options { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }.character-options label { grid-template-columns: auto 1fr; align-items: center; }.character-options input { width: auto; }.modal small { color: #9a4d58; }.modal-actions { display: flex; justify-content: flex-end; gap: 10px; }.confirmation { width: min(430px, 100%); }
+.modal.note-editor form { display: flex; min-height: 0; flex-direction: column; gap: 12px; margin-top: 8px; }
+.modal.note-editor .character-options { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px 8px; }
+.modal.note-editor textarea { min-height: 84px; max-height: 120px; resize: vertical; }
+.modal.note-editor .modal-actions { flex: 0 0 auto; }
+.modal.note-editor .character-options label { overflow-wrap: anywhere; }
 .toast { position: fixed; right: 20px; bottom: 20px; z-index: 30; padding: 14px 18px; border-radius: 12px; background: #4f8067; color: white; box-shadow: var(--shadow); }
 @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; transition: none !important; } }
 @media (max-width: 900px) { .notes-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }.toolbar { grid-template-columns: 1fr; }.character-filter { justify-content: flex-start; } }

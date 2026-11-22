@@ -175,11 +175,11 @@ export default function App() {
               const item = getCharacter(note.personagem);
               return (
                 <article className={`note-card ${item.className}`} key={note.id}>
-                  <img className="character-art" src={item.image} alt="" aria-hidden="true" />
+                  <img className="note-paper-art" src={item.image} alt="" aria-hidden="true" />
                   <div className="note-content">
                     <div className="note-meta"><span>{item.name}</span><time>{formatDate(note.atualizadoEm || note.criadoEm)}</time></div>
                     <h3>{note.titulo}</h3>
-                    <p>{note.texto}</p>
+                    <p className="note-text">{note.texto}</p>
                     <div className="note-actions">
                       <button type="button" className="secondary-button" onClick={() => openEdit(note)}>Editar</button>
                       <button type="button" className="danger-button" onClick={() => setDeleteTarget(note)}>Excluir</button>
@@ -194,29 +194,34 @@ export default function App() {
 
       {formOpen && (
         <div className="modal-overlay" role="presentation" onMouseDown={(event) => { if (event.target === event.currentTarget) setFormOpen(false); }}>
-          <div className="modal" role="dialog" aria-modal="true" aria-labelledby="form-title">
-            <button className="close-button" type="button" aria-label="Fechar" onClick={() => setFormOpen(false)}>x</button>
-            <h2 id="form-title">{selected ? 'Editar nota' : 'Nova nota'}</h2>
-            <form onSubmit={submitForm} noValidate>
-              <label>Titulo<input value={form.titulo} onChange={(event) => setForm({ ...form, titulo: event.target.value })} required />{formErrors.titulo && <small>{formErrors.titulo}</small>}</label>
-              <label>Conteudo<textarea value={form.texto} onChange={(event) => setForm({ ...form, texto: event.target.value })} required />{formErrors.texto && <small>{formErrors.texto}</small>}</label>
-              <fieldset>
-                <legend>Personagem</legend>
-                <div className="character-options">
-                  {characters.map((item) => (
-                    <label key={item.id}>
-                      <input type="radio" name="personagem" value={item.id} checked={form.personagem === item.id} onChange={(event) => setForm({ ...form, personagem: event.target.value })} />
-                      {item.name}
-                    </label>
-                  ))}
-                </div>
-                {formErrors.personagem && <small>{formErrors.personagem}</small>}
-              </fieldset>
-              <div className="modal-actions">
-                <button type="button" className="secondary-button" onClick={() => setFormOpen(false)}>Cancelar</button>
-                <button type="submit" className="primary-button" disabled={saving}>{saving ? 'Salvando...' : 'Salvar'}</button>
+          <div className={`modal note-editor ${getCharacter(form.personagem).className}`} role="dialog" aria-modal="true" aria-labelledby="form-title">
+            <img className="note-paper-art" src={getCharacter(form.personagem).image} alt="" aria-hidden="true" />
+            <div className="editor-content">
+              <div className="editor-heading">
+                <h2 id="form-title">{selected ? 'Editar nota' : 'Nova nota'}</h2>
+                <button className="close-button" type="button" aria-label="Fechar" onClick={() => setFormOpen(false)}>x</button>
               </div>
-            </form>
+              <form onSubmit={submitForm} noValidate>
+                <label>Titulo<input value={form.titulo} onChange={(event) => setForm({ ...form, titulo: event.target.value })} required />{formErrors.titulo && <small>{formErrors.titulo}</small>}</label>
+                <label>Conteudo<textarea value={form.texto} onChange={(event) => setForm({ ...form, texto: event.target.value })} required />{formErrors.texto && <small>{formErrors.texto}</small>}</label>
+                <fieldset>
+                  <legend>Personagem</legend>
+                  <div className="character-options">
+                    {characters.map((item) => (
+                      <label key={item.id}>
+                        <input type="radio" name="personagem" value={item.id} checked={form.personagem === item.id} onChange={(event) => setForm({ ...form, personagem: event.target.value })} />
+                        {item.name}
+                      </label>
+                    ))}
+                  </div>
+                  {formErrors.personagem && <small>{formErrors.personagem}</small>}
+                </fieldset>
+                <div className="modal-actions">
+                  <button type="button" className="secondary-button" onClick={() => setFormOpen(false)}>Cancelar</button>
+                  <button type="submit" className="primary-button" disabled={saving}>{saving ? 'Salvando...' : 'Salvar'}</button>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       )}
