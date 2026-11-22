@@ -1,4 +1,5 @@
 const noteService = require('../services/noteService');
+const { validateNote } = require('../validators/noteValidator');
 
 function listNotes(req, res, next) {
   try {
@@ -21,4 +22,19 @@ function getNoteById(req, res, next) {
   }
 }
 
-module.exports = { listNotes, getNoteById };
+function createNote(req, res, next) {
+  const result = validateNote(req.body || {});
+  if (!result.isValid) {
+    res.status(400).json({ error: 'Dados invalidos', fields: result.errors });
+    return;
+  }
+
+  try {
+    const note = noteService.createNote(result.value);
+    res.status(201).json(note);
+  } catch (error) {
+    next(error);
+  }
+}
+
+module.exports = { listNotes, getNoteById, createNote };
