@@ -56,4 +56,17 @@ function updateNote(req, res, next) {
   }
 }
 
-module.exports = { listNotes, getNoteById, createNote, updateNote };
+function deleteNote(req, res, next) {
+  try {
+    const deleted = noteService.deleteNote(req.params.id);
+    if (!deleted) {
+      res.status(404).json({ error: 'Nota nao encontrada' });
+      return;
+    }
+    res.status(204).send();
+  } catch (error) {
+    next(error);
+  }
+}
+
+module.exports = { listNotes, getNoteById, createNote, updateNote, deleteNote };
