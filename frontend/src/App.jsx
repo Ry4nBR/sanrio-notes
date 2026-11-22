@@ -175,7 +175,7 @@ export default function App() {
               const item = getCharacter(note.personagem);
               return (
                 <article className={`note-card ${item.className}`} key={note.id}>
-                  <img className="character-art" src={item.image} alt="" aria-hidden="true" onError={(event) => { event.currentTarget.style.display = 'none'; }} />
+                  <img className="character-art" src={item.image} alt="" aria-hidden="true" />
                   <div className="note-content">
                     <div className="note-meta"><span>{item.name}</span><time>{formatDate(note.atualizadoEm || note.criadoEm)}</time></div>
                     <h3>{note.titulo}</h3>
