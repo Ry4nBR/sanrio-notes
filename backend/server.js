@@ -19,6 +19,10 @@ app.use(cors({
   }
 }));
 
+app.get('/health', (req, res) => {
+  res.status(200).json({ status: 'ok' });
+});
+
 app.listen(PORT, () => {
   console.log(`Sanrio Notes API rodando na porta ${PORT}`);
 });
