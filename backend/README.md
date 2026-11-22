@@ -19,7 +19,7 @@ O servidor usa `PORT=3000` por padrão.
 
 ## Variáveis
 
-Copie `.env.example` para `.env`. `CORS_ORIGIN` aceita uma lista separada por virgulas.
+Copie `.env.example` para `.env`. `CORS_ORIGIN` aceita uma lista separada por virgulas. O servidor tambem aceita as origens locais `http://localhost:5173` e `http://127.0.0.1:5173`.
 
 ## Endpoints
 
