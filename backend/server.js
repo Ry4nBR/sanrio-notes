@@ -26,6 +26,10 @@ app.get('/health', (req, res) => {
 app.use('/api/notes', require('./src/routes/noteRoutes'));
 app.use(require('./src/middlewares/errorHandler'));
 
-app.listen(PORT, () => {
-  console.log(`Sanrio Notes API rodando na porta ${PORT}`);
-});
+if (require.main === module) {
+  app.listen(PORT, () => {
+    console.log(`Sanrio Notes API rodando na porta ${PORT}`);
+  });
+}
+
+module.exports = app;
