@@ -37,4 +37,20 @@ Sanrio Notes/
 
 ## Como executar
 
-As instrucoes de execucao serao adicionadas durante a implementacao da API e do front-end.
+### API
+
+```bash
+cd backend
+npm install
+npm start
+```
+
+### Front-end
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+Crie os arquivos locais a partir de `backend/.env.example` e `frontend/.env.example`.
