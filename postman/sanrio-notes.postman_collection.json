@@ -1,0 +1,43 @@
+{
+  "info": {
+    "name": "Sanrio Notes API",
+    "description": "Colecao CRUD da API Sanrio Notes",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "baseUrl", "value": "http://localhost:3000" },
+    { "key": "noteId", "value": "" }
+  ],
+  "item": [
+    {
+      "name": "Listar notas",
+      "request": { "method": "GET", "url": "{{baseUrl}}/api/notes" }
+    },
+    {
+      "name": "Consultar nota",
+      "request": { "method": "GET", "url": "{{baseUrl}}/api/notes/{{noteId}}" }
+    },
+    {
+      "name": "Criar nota",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": { "mode": "raw", "raw": "{\n  \"titulo\": \"Minha primeira nota\",\n  \"texto\": \"Conteudo da nota\",\n  \"personagem\": \"cinnamoroll\"\n}" },
+        "url": "{{baseUrl}}/api/notes"
+      }
+    },
+    {
+      "name": "Atualizar nota",
+      "request": {
+        "method": "PUT",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": { "mode": "raw", "raw": "{\n  \"titulo\": \"Nota atualizada\",\n  \"texto\": \"Conteudo atualizado\",\n  \"personagem\": \"kuromi\"\n}" },
+        "url": "{{baseUrl}}/api/notes/{{noteId}}"
+      }
+    },
+    {
+      "name": "Excluir nota",
+      "request": { "method": "DELETE", "url": "{{baseUrl}}/api/notes/{{noteId}}" }
+    }
+  ]
+}
